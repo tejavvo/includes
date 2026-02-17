@@ -3,7 +3,7 @@ CFLAGS  = -std=c17 -Wall -Wextra -O2 -I.
 AR      = ar
 ARFLAGS = rcs
 
-SRC = utils.c stack/stack.c
+SRC = utils.c stack/stack.c queue/queue.c graph/graph.c
 OBJ = $(SRC:.c=.o)
 LIB = libutils.a
 

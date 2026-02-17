@@ -2,6 +2,8 @@
 #define UTILS_H
 
 #include "stack/stack.h"
+#include "queue/queue.h"
+#include "graph/graph.h"
 
 /* forward-declare size_t without including stddef */
 typedef unsigned long usize;
