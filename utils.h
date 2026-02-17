@@ -21,6 +21,17 @@ void print_char(void *p);
 #define dprintarray(s,e) printarray(s,e,sizeof(int), print_int)
 #define lprintarray(s,e) printarray(s,e,sizeof(long), print_long)
 #define llprintarray(s,e) printarray(s,e,sizeof(long long), print_ll)
-#define cprintarray(s,e) printarray(s,e,sizeof(char), )
+#define cprintarray(s,e) printarray(s,e,sizeof(char), print_char)
+
+#define printstack(s, printer) \
+    printarray( \
+        (s).data, \
+        (s).data + (s).top * (s).elem_size, \
+        (s).elem_size, \
+        printer \
+    )
+
+/* compare functins */
+int icmp(const void *a, const void *b);
 
 #endif

@@ -5,6 +5,12 @@
 
 #include "utils.h"
 
+int icmp(const void *a, const void *b) {
+    int x = *(const int*)a;
+    int y = *(const int*)b;
+    return (x > y) - (x < y);
+}
+
 int fsread(void) {
     int x = 0, sign = 1;
     int c = getchar_unlocked();
